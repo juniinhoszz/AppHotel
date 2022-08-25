@@ -18,9 +18,9 @@ namespace AppHotel
             },
             new DadosUsuario()
             {
-                Usuario = "prof@etec",
-                Nome = "Professor",
-                Senha = "456"
+                Usuario = "juninho",
+                Nome = "Juninho Chiodi",
+                Senha = "123"
             },
         };
 
