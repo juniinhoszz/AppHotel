@@ -33,7 +33,6 @@
 
                     <Label Text="Senha:" FontSize="21" TextColor="White" Margin="5"/>
                     
-
                     <Entry x:Name="txtSenha"
                            BackgroundColor="Transparent"
 			               FontSize="17"
