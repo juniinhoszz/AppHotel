@@ -18,12 +18,21 @@ namespace AppHotel.View
         {
             InitializeComponent();
             PropriedadeApp = (App)Application.Current;
+            NavigationPage.SetHasNavigationBar(this, false);
 
             string usuario_login = PropriedadeApp.Properties["usuario_logado"].ToString();
 
             DadosUsuario usuario_logado = PropriedadeApp.lista_usuarios.FirstOrDefault(i => i.Usuario == usuario_login);
 
             lblBoasVindas.Text = "Bem-vindo(a) " + usuario_logado.Nome;
+
+            pck_suites.ItemsSource = PropriedadeApp.Suites;
+
+            dtpck_checkin.MinimumDate = DateTime.Now;
+            dtpck_checkin.MaximumDate = DateTime.Now.AddMonths(6);
+
+            dtpck_checkout.MinimumDate = DateTime.Now.AddDays(1);
+            dtpck_checkout.MaximumDate = DateTime.Now.AddMonths(6).AddDays(1);
         }
 
         private async void btn_deslogar_Clicked(object sender, EventArgs e)
@@ -46,6 +55,11 @@ namespace AppHotel.View
             {
                 await DisplayAlert("Ops", ex.Message, "OK");
             }
+        }
+
+        private void btn_calcular_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

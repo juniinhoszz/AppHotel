@@ -4,5 +4,14 @@
              x:Class="AppHotel.App">
     <Application.Resources>
 
+        <Style TargetType="Label" x:Key="fontePersonalizada">
+            <Setter Property="FontFamily">
+                <Setter.Value>
+                    <OnPlatform x:TypeArguments="x:String"
+                                Android="PlayfairDisplay-VariableFont_wght.ttf#PlayfairDisplay-VariableFont_wght" />
+                </Setter.Value>
+            </Setter>
+        </Style>
+
     </Application.Resources>
 </Application>
