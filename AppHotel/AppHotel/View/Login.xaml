@@ -18,29 +18,31 @@
                    WidthRequest="340">
 
                 <StackLayout VerticalOptions="CenterAndExpand" Margin="5">
-                    <Label Text="Usuário:" FontSize="21" TextColor="White" Margin="5"/>
+                    <Label Text="Usuário:" FontSize="23" TextColor="White" Margin="5" Style="{StaticResource fontePersonalizada}"/>
                     
                     <Entry x:Name="txtUser"
                            BackgroundColor="Transparent"
-			               FontSize="17"
+			               FontSize="20"
                            HeightRequest="40"
                            Placeholder="Digite seu usuário de acesso."
                            PlaceholderColor="White"
                            TextColor="White"
-                           MaxLength="20"/>
+                           MaxLength="20"
+                           Style="{StaticResource fontePersonalizada}"/>
 
                     <Label FontSize="1" Margin="5"/>
 
-                    <Label Text="Senha:" FontSize="21" TextColor="White" Margin="5"/>
+                    <Label Text="Senha:" FontSize="23" TextColor="White" Margin="5" Style="{StaticResource fontePersonalizada}"/>
                     
                     <Entry x:Name="txtSenha"
                            BackgroundColor="Transparent"
-			               FontSize="17"
+			               FontSize="20"
                            HeightRequest="40"
                            Placeholder="Digite sua senha de acesso."
                            PlaceholderColor="White"
                            TextColor="White"
-                           IsPassword="True"/>
+                           IsPassword="True"
+                           />
 
                     <Label FontSize="1" Margin="5"/>
 
@@ -53,9 +55,11 @@
                             HeightRequest="40"
                             WidthRequest="50"
                             BackgroundColor="Transparent"
-                            Text="Fazer o Login"
+                            Text="Fazer o Log-in"
                             TextColor="White"
-                            Clicked="btnLogin_Clicked"/>
+                            Clicked="btnLogin_Clicked"
+                            FontSize="18"
+                            Style="{StaticResource fontePersonalizada}"/>
                     
                     
                 </StackLayout>

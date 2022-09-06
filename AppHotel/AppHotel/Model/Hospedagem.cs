@@ -8,18 +8,18 @@ namespace AppHotel.Model
     {
         Suite quarto;
 
-        int qnt_adultos;
+        int qntadultos;
 
-        public int Qnt_adultos
+        public int Qntadultos
         {
-            get => qnt_adultos;
+            get => qntadultos;
 
             set
             {
                 if (value == 0)
                     throw new Exception("Por favor, informe a quantidade de adultos");
 
-                qnt_adultos = value;
+                qntadultos = value;
             }
         }
 
@@ -51,7 +51,7 @@ namespace AppHotel.Model
 
         public double ValorTotal
         {
-            get => ((Qnt_adultos * Quarto.ValorDiariaAdulto) + (Qntcriancas * Quarto.ValorDiariaCrianca)) * Estadia;
+            get => ((Qntadultos * Quarto.ValorDiariaAdulto) + (Qntcriancas * Quarto.ValorDiariaCrianca)) * Estadia;
         }
 
 

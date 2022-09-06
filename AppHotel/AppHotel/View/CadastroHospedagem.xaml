@@ -10,7 +10,7 @@
                BackgroundColor="Black">
 
                 <StackLayout Orientation="Horizontal">
-                    <Label x:Name="lblBoasVindas" Text="Bem Vindo(a) Juniinho" TextColor="White" FontSize="16" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                    <Label x:Name="lblBoasVindas"  Text="" TextColor="White" FontSize="17" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
                     <Button x:Name="btn_deslogar"
                             BorderColor="White"
@@ -22,11 +22,13 @@
                             BackgroundColor="Transparent"
                             TextColor="White"
                             HorizontalOptions="EndAndExpand"
-                            Clicked="btn_deslogar_Clicked"/>
+                            Clicked="btn_deslogar_Clicked"
+                            Style="{StaticResource fontePersonalizada}"
+                            />
                 </StackLayout>
             </Frame>
 
-            <Label Text="Realizar Hospedagem" HorizontalOptions="CenterAndExpand" Margin="10" FontSize="38" TextColor="black" 
+            <Label Text="Realizar Hospedagem" HorizontalOptions="CenterAndExpand" Margin="10" FontSize="45" TextColor="black" Style="{StaticResource fontePersonalizada}"
                    />
 
             <Frame HeightRequest="560"
@@ -42,7 +44,7 @@
 
                         
                         <Label Grid.Row="0" Grid.Column="0"
-                               Text="Adultos:" TextColor="White"
+                               Text="Adultos:" TextColor="White" 
                                FontSize="18"
                                Margin="5"/>
 
@@ -80,9 +82,10 @@
 
                     <Label Text="Escolha uma Suite:"
                            TextColor="White"
-                           FontSize="25"
+                           FontSize="27"
                            HorizontalTextAlignment="Center"
-                           Margin="0, 15, 0, 0"/>
+                           Margin="0, 15, 0, 0"
+                           Style="{StaticResource fontePersonalizada}"/>
 
                     
                         <StackLayout>
@@ -93,15 +96,17 @@
                             x:Name="pck_suites"
                             TitleColor="White"
                             FontSize="18"
-                            TextColor="White"/>
+                            TextColor="White"
+                                Style="{StaticResource fontePersonalizada}"/>
                     </StackLayout>
 
-                    <Frame BackgroundColor="White" Margin="10" CornerRadius="10" BorderColor="#f52d57">
+                    <Frame BackgroundColor="White" Margin="10,15,10,15" CornerRadius="10" BorderColor="#f52d57">
                         <StackLayout HorizontalOptions="CenterAndExpand">
 
                             <Label Text="Período de Estadia"
-                                   FontSize="28" TextColor="black"
-                                   HorizontalTextAlignment="Center" Margin="0, 0,0,5"/>
+                                   FontSize="30" TextColor="black"
+                                   HorizontalTextAlignment="Center" Margin="0, 0,0,5"
+                                   Style="{StaticResource fontePersonalizada}"/>
 
                             <StackLayout Orientation="Horizontal">
 
@@ -110,7 +115,8 @@
                                 <DatePicker x:Name="dtpck_checkin"
                                             Format="dd/MM/yyyy"
                                             FontSize="22" TextColor="black"
-                                            BackgroundColor="Transparent" Margin="34,0,0,0"/>
+                                            BackgroundColor="Transparent" Margin="34,0,0,0"
+                                            DateSelected="dtpck_checkin_DateSelected"/>
                             </StackLayout>
                             
                             <StackLayout Orientation="Horizontal">
@@ -127,6 +133,8 @@
                         </StackLayout>
                     </Frame>
 
+                    
+
                     <Button x:Name="btn_calcular"
                             BorderColor="White"
                             CornerRadius="10"
@@ -138,8 +146,10 @@
                             TextColor="White"
                             HorizontalOptions="CenterAndExpand"
                             Clicked="btn_calcular_Clicked"
-                            Margin="0,12,0,12"
-                            FontSize="20"/>
+                            Margin="0,18,0,15"
+                            FontSize="20"
+                            Style="{StaticResource fontePersonalizada}"
+                            />
 
 
                 </StackLayout>

@@ -18,6 +18,7 @@ namespace AppHotel.View
             InitializeComponent();
 
             PropriedadeApp = (App)Application.Current;
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private void btnLogin_Clicked(object sender, EventArgs e)
@@ -31,7 +32,7 @@ namespace AppHotel.View
                 {
                     App.Current.Properties.Add("usuario_logado", user_digitado);
 
-                    App.Current.MainPage = new CadastroHospedagem();
+                    Navigation.PushAsync(new CadastroHospedagem());
                 }
                 else
                     throw new Exception("Usuário ou senha incorretos.");

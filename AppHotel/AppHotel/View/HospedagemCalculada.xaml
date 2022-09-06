@@ -1,12 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppHotel.View.HospedagemCalculada">
+             x:Class="AppHotel.View.HospedagemCalculada"
+             BackgroundColor="#f52d57">
+
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Frame HeightRequest="38"
+               BackgroundColor="Black">
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="lblBoasVindas"  Text="" TextColor="White" FontSize="17" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+                    <Button x:Name="btn_deslogar"
+                            BorderColor="White"
+                            CornerRadius="10"
+                            BorderWidth="1"
+                            HeightRequest="30"
+                            WidthRequest="90"
+                            Text="LogOut"
+                            BackgroundColor="Transparent"
+                            TextColor="White"
+                            HorizontalOptions="EndAndExpand"
+                            Clicked="btn_deslogar_Clicked"
+                            Style="{StaticResource fontePersonalizada}"
+                            />
+                </StackLayout>
+            </Frame>
+
+            <StackLayout>
+
+                <Label Text="Detalhes da Hospedagem" VerticalOptions="CenterAndExpand" Margin="10" FontSize="45" TextColor="black" Style="{StaticResource fontePersonalizada}"
+                   />
+            </StackLayout>
+
         </StackLayout>
+
+        
+        
+        
     </ContentPage.Content>
+    
+    
 </ContentPage>

@@ -11,13 +11,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="img\imglogin.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="img\imglogin.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <Compile Remove="img\**" />
+    <EmbeddedResource Remove="img\**" />
+    <None Remove="img\**" />
   </ItemGroup>
 
   <ItemGroup>
