@@ -19,6 +19,8 @@ namespace AppHotel.View
 
             PropriedadeApp = (App)Application.Current;
             NavigationPage.SetHasNavigationBar(this, false);
+
+            img.Source = ImageSource.FromResource("AppHotel.logo.hotell.png");
         }
 
         private void btnLogin_Clicked(object sender, EventArgs e)
