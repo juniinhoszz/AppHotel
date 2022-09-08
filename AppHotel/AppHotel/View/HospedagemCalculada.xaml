@@ -29,8 +29,225 @@
 
             <StackLayout>
 
-                <Label Text="Detalhes da Hospedagem" VerticalOptions="CenterAndExpand" Margin="10" FontSize="45" TextColor="black" Style="{StaticResource fontePersonalizada}"
+                <Label Text="Detalhes da Hospedagem" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" Margin="5" FontSize="39" TextColor="black" Style="{StaticResource fontePersonalizada}"
                    />
+
+                <Frame HeightRequest="560"
+                   BackgroundColor="Black"
+                   CornerRadius="10"
+                   Margin="5">
+
+                    <StackLayout>
+                        <Label Text="Suíte de estadia:"
+                               TextColor="white"
+                               FontSize="23"
+                               FontAttributes="Bold"
+                               Margin="5, 0, 0, 0"
+                               HorizontalTextAlignment="Center"
+                               />
+
+                        <Label Text="{Binding Path=Quarto.Descricao}"
+                               TextColor="White"
+                               FontSize="18"
+                               TextTransform="Uppercase"
+                               FontAttributes="Bold"
+                               Margin="5, 0, 0, 0"
+                               TextDecorations="Underline"
+                               HorizontalTextAlignment="Center"
+                               />
+
+                        <Label Text="Quantidade de Visitantes:"
+                               TextColor="white"
+                               FontSize="23"
+                               FontAttributes="Bold"
+                               Margin="5, 12, 0, 0"
+                               HorizontalTextAlignment="Center"
+                               />
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Adultos: " 
+                               TextColor="white"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               Margin="5, 3, 0, 0"
+                               />
+
+                            <Label Text="{Binding Qntadultos}"
+                                   TextColor="White"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   Margin="5, 3, 0, 0"
+                                   />
+
+
+                            <Label Text="Crianças: " 
+                                   TextColor="white"
+                                   FontSize="20"
+                                   FontAttributes="Bold"
+                                   Margin="75, 3, 0, 0"
+                                   />
+
+                            <Label Text="{Binding Qntcriancas}"
+                                   TextColor="White"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   Margin="5, 3, 5, 0"
+                                   
+                                   />
+                        </StackLayout>
+
+
+                        <Label Text="Data de estadia:"
+                               TextColor="white"
+                               FontSize="23"
+                               FontAttributes="Bold"
+                               Margin="0, 10, 0, 0"
+                               HorizontalTextAlignment="Center"
+                               />
+                        <Grid RowDefinitions="Auto, Auto"
+                      ColumnDefinitions="*, *, *">
+                            <Label Grid.Row="0" Grid.Column="0" Text="Check-In:" 
+                                   TextColor="white"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   FontSize="20"
+                                   FontAttributes="Bold"
+                                   Margin="0,10,0,0"/>
+
+                            <Label Grid.Row="0" Grid.Column="1" Text="Check-Out:"
+                                   TextColor="white"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   FontSize="20"
+                                   FontAttributes="Bold"
+                                   Margin="0,10,0,0"
+                                   />
+
+                            <Label Grid.Row="0" Grid.Column="2" Text="Estadia:"
+                                   TextColor="white"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   FontSize="20"
+                                   FontAttributes="Bold"
+                                   Margin="0,10,0,0"/>
+
+                            <Label Grid.Row="1" Grid.Column="0" 
+                                   Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}"
+                                   TextColor="white"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                           />
+
+                            <Label Grid.Row="1" Grid.Column="1" 
+                           Text="{Binding DataCheckOut, StringFormat='{}{0:dd/MM/yyyy}'}"
+                                   TextColor="white"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                            />
+
+                            <Label x:Name="lbl_est" Grid.Row="1" Grid.Column="2" 
+                                   Text="{Binding Estadia}" 
+                                   TextColor="white"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                            />
+                        </Grid>
+
+                        <StackLayout HorizontalOptions="Center" Margin="0,15,0,15">
+                            <Label Text="Valor da Hospedagem: "
+                                   TextColor="white"
+                                   FontSize="23"
+                                   FontAttributes="Bold"
+                                   Margin="0, 15, 0, 0"
+                                   HorizontalTextAlignment="Center"/>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                            <Label Text="R$"                                  
+                                   FontSize="23"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   Margin="0,5,0,0"
+                                   TextColor="#f52d57"
+                                   FontAttributes="Bold"/>
+                            <Label Text="{Binding ValorTotal, StringFormat='{}{0:f2}'}"                                  
+                                   FontSize="26"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   Margin="0,5,0,0"
+                                   TextColor="#f52d57"
+                                   FontAttributes="Bold"/>
+                            </StackLayout>
+
+
+                            
+                            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                                
+                                <Button x:Name="btn_voltar"
+                                        BorderColor="White"
+                                        CornerRadius="10"
+                                        BorderWidth="1"
+                                        HeightRequest="80"
+                                        WidthRequest="170"
+                                        Text="Atualizar Hospedagem"
+                                        BackgroundColor="Transparent"
+                                        TextColor="White"
+                                
+                                        Clicked="btn_voltar_Clicked"
+                                        Margin="0,18,0,0"
+                                        FontSize="20"
+                                        Style="{StaticResource fontePersonalizada}"
+                                />
+
+                                <Button x:Name="btn_cancel"
+                                        BorderColor="White"
+                                        CornerRadius="10"
+                                        BorderWidth="1"
+                                        HeightRequest="80"
+                                        WidthRequest="170"
+                                        Text="Cancelar Hospedagem"
+                                        BackgroundColor="Transparent"
+                                        TextColor="White"
+                                
+                                        Clicked="btn_cancel_Clicked"
+                                        Margin="0,18,0,0"
+                                        FontSize="20"
+                                        Style="{StaticResource fontePersonalizada}"
+                                />
+                                
+
+                            </StackLayout>
+
+                            <StackLayout>
+                            <Button x:Name="btn_confirm"
+                                    BorderColor="White"
+                                    CornerRadius="10"
+                                    BorderWidth="1"
+                                    HeightRequest="50"
+                                    WidthRequest="100"
+                                    Text="Confirmar Hospedagem"
+                                    BackgroundColor="Transparent"
+                                    TextColor="White"
+                                
+                                    Clicked="btn_confirm_Clicked"
+                                    Margin="0,0,0,0"
+                                    FontSize="20"
+                                    Style="{StaticResource fontePersonalizada}"
+                                    
+                                />
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
             </StackLayout>
 
         </StackLayout>

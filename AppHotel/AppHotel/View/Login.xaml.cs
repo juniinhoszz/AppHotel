@@ -32,7 +32,7 @@ namespace AppHotel.View
                 {
                     App.Current.Properties.Add("usuario_logado", user_digitado);
 
-                    Navigation.PushAsync(new CadastroHospedagem());
+                    App.Current.MainPage = new NavigationPage(new CadastroHospedagem());
                 }
                 else
                     throw new Exception("Usuário ou senha incorretos.");

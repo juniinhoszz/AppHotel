@@ -46,14 +46,16 @@
                         <Label Grid.Row="0" Grid.Column="0"
                                Text="Adultos:" TextColor="White" 
                                FontSize="18"
-                               Margin="5"/>
+                               Margin="5"
+                               FontAttributes="Bold"/>
 
                         <Label Grid.Row="0" Grid.Column="1"
                                Text="{Binding Value}"
                                BindingContext="{x:Reference stp_adultos}"
                                FontSize="20"
                                TextColor="White"
-                               Margin="5"/>
+                               Margin="5"
+                               FontAttributes="Bold"/>
 
                         <Stepper Grid.Row="0" Grid.Column="2"
                                  Minimum="0"
@@ -64,14 +66,16 @@
                         <Label Grid.Row="3" Grid.Column="0"
                                Text="Crianças:" TextColor="White"
                                FontSize="17"
-                               Margin="5"/>
+                               Margin="5"
+                               FontAttributes="Bold"/>
 
                         <Label Grid.Row="3" Grid.Column="1"
                                Text="{Binding Value}"
                                BindingContext="{x:Reference stp_criancas}"
                                FontSize="20"
                                TextColor="White"
-                               Margin="5"/>
+                               Margin="5"
+                               FontAttributes="Bold"/>
 
                         <Stepper Grid.Row="3" Grid.Column="2"
                                  Minimum="0"
@@ -110,21 +114,23 @@
 
                             <StackLayout Orientation="Horizontal">
 
-                                <Label Text="Check-in:" FontSize="23" TextColor="black" Margin="0,10,0,0"/>
+                                <Label FontAttributes="Bold" Text="Check-in:" FontSize="23" TextColor="black" Margin="0,10,0,0"/>
                                 
                                 <DatePicker x:Name="dtpck_checkin"
                                             Format="dd/MM/yyyy"
                                             FontSize="22" TextColor="black"
                                             BackgroundColor="Transparent" Margin="34,0,0,0"
+                                            FontAttributes="Bold"
                                             DateSelected="dtpck_checkin_DateSelected"/>
                             </StackLayout>
                             
                             <StackLayout Orientation="Horizontal">
 
-                                <Label Text="Check-out:" FontSize="23" TextColor="black" Margin="0,10,0,0"
+                                <Label FontAttributes="Bold" Text="Check-out:" FontSize="23" TextColor="black" Margin="0,10,0,0"
                                        />
                                 
                                 <DatePicker x:Name="dtpck_checkout"
+                                            FontAttributes="Bold"
                                             Format="dd/MM/yyyy" 
                                             FontSize="22" TextColor="black"
                                             BackgroundColor="Transparent" Margin="20,0,0,0"/>

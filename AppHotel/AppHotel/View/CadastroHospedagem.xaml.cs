@@ -45,7 +45,7 @@ namespace AppHotel.View
                 {
                     App.Current.Properties.Remove("usuario_logado");
 
-                    Navigation.PushAsync(new Login());
+                    App.Current.MainPage = new Login();
                 }
                 else throw new Exception("Falha ao fazer logout");
 
