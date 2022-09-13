@@ -27,9 +27,12 @@
                 </StackLayout>
             </Frame>
 
-            <StackLayout>
+            <StackLayout Orientation="Vertical">
 
-                <Label Text="Detalhes da Hospedagem" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" Margin="5" FontSize="39" TextColor="black" Style="{StaticResource fontePersonalizada}"
+                <Label Text="Detalhes da" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" Margin="0,5,0,0" FontSize="38" TextColor="black" Style="{StaticResource fontePersonalizada}"
+                   />
+
+                <Label Text="Hospedagem" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" Margin="0,0,5,0" FontSize="39" TextColor="black" Style="{StaticResource fontePersonalizada}"
                    />
 
                 <Frame HeightRequest="560"
