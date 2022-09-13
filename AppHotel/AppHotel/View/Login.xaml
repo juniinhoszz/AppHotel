@@ -9,10 +9,13 @@
 
         <StackLayout>
 
-            <Label FontSize="8"></Label>
-            <Image x:Name="img" HeightRequest="100" Margin="0,80,0,0" />
+            
+            
+            <Image x:Name="img" HeightRequest="95" Margin="0,90,0,0" />
+        
+        
 
-                    
+
 
 
             <Frame CornerRadius="10"
